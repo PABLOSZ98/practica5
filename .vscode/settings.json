@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "Ejercicio_refugio_animales/src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Ejercicio_refugio_animales/lib/biblioteca_progiii.jar"
+    ]
+}
