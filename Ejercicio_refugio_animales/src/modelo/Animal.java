@@ -1,5 +1,3 @@
-/*• Animal: cuidador, nombre, especie, peso en kg y consumo diario de alimento en kg. */
-
 
 package modelo;
 
