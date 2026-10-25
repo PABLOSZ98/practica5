@@ -8,11 +8,11 @@ public class Refugio{
     int animales_registrados;
 
 
-    public Refugio(Animal animales[],float precio_alimentoKg, int animales_registrados ){
+    public Refugio(int capacidad ){
 
-        this.animales = animales;
-        this.precio_alimentoKg = precio_alimentoKg;
-        this.animales_registrados = animales_registrados;
+        this.animales = new Animal[capacidad];
+        this.precio_alimentoKg = 3;
+        this.animales_registrados = 0;
 
 
     }
@@ -49,6 +49,24 @@ public class Refugio{
     }
 
 
+        public boolean anadirAnimal(Animal animal){
+
+            if (animales_registrados >= animales.length){
+
+                System.out.println("Numero de animales maximos \n");
+                return false;
+            }
+
+            else{
+
+             animales[animales_registrados] = animal;
+             animales_registrados++;   
+
+                 return true;
+            }
+
+           
+        }
 
 
 

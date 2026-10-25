@@ -11,13 +11,13 @@ public class Animal {
     
 
 
-    public Animal(Cuidador cuidador, String nombre,String especie, int peso, int consumoDiario){
+    public Animal(Cuidador cuidador, String nombre, String especie, int peso, int consumoDiario){
 
         this.cuidador = cuidador;
         this.nombre = nombre;
         this.especie = especie;
         this.peso = peso;
-        this.consumoDiario = consumoDiario;
+        this.consumoDiario = consumoDiario; 
     }
 
     public Cuidador getcuidador(){

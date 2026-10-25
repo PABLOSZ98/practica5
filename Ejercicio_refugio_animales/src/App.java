@@ -7,7 +7,14 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         System.out.println("---GESTION DE REFUGIO DE ANIMALES---\n\n");
-        int opcion;
+        int opcion,capacidad = 0;
+
+       do{
+
+        capacidad = Esdia.readInt("Introduce la cantidad maxima de animales: ");
+
+       }while(capacidad <= 0);
+
 
         do {
             System.out.println("1) Crear un nuevo registro de animales ");
