@@ -43,7 +43,7 @@ public class App {
                         System.out.println("Error: No existe ningún registro, crea uno primero.\n");
                     }
                     else{
-                        
+
                     float nuevoPrecio = 0;
                     do {
                         nuevoPrecio = Esdia.readFloat("Introduce el nuevo precio del alimento por kg: ");
@@ -96,6 +96,45 @@ public class App {
                     break;}
 
                 case 4:
+
+                        if (refugio != null && refugio.getsanimales_registrados() > 0){
+
+                            System.out.println("\n---------------------------------------------------------------------------------------------------------");
+                    System.out.printf("| %-12s | %-12s | %-8s | %-10s | %-10s | %-20s | %-9s |\n",
+                            "Nombre", "Especie", "Peso(kg)", "Consumo", "Coste/dia", "Cuidador");
+                    System.out.println("---------------------------------------------------------------------------------------------------------");
+
+                    Animal[] lista = refugio.getanimales();
+                    float precioKg = refugio.getprecio_alimentoKg();
+
+                    for (int i = 0; i < refugio.getsanimales_registrados(); i++) {
+                        Animal a = lista[i];
+                        Cuidador c = a.getcuidador();
+                        
+                       
+
+                        String nombreCuidador = c.getnombre() + " " + c.getapellido();
+                        float costeDiario = a.calcularCosteDiario(precioKg);
+
+                        System.out.printf("| %-12s | %-12s | %8.2f | %10.2f | %10.2f | %-20s | %-9s |\n",
+                                a.getnombre(),
+                                a.getespecie(),
+                                (float) a.getpeso(),
+                                (float) a.getconsumoDiario(),
+                                costeDiario,
+                                nombreCuidador);
+                    }
+
+                    System.out.println("Coste diario total: " + refugio.calcularCosteDiarioTotal() +" euros\n");
+                    System.out.println("Peso medio: " + refugio.calcularPesoMedio() + "kg\n\n");
+
+
+
+
+
+
+
+                        }
 
                     break;
 

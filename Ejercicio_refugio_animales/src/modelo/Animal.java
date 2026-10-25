@@ -70,7 +70,10 @@ public class Animal {
         this.consumoDiario = consumoDiario;
     }
 
+    public float calcularCosteDiario(float precio_alimentoKg){
 
+        return this.consumoDiario * precio_alimentoKg;
+    }
 
 
 

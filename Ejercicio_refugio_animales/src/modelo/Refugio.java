@@ -28,7 +28,7 @@ public class Refugio{
         this.animales = animales;
     }
 
-    public float precio_alimentoKg(){
+    public float getprecio_alimentoKg(){
 
         return precio_alimentoKg;
     }
@@ -38,7 +38,7 @@ public class Refugio{
         this.precio_alimentoKg = precio_alimentoKg;
     }
 
-    public int animales_registrados(){
+    public int getsanimales_registrados(){
 
         return animales_registrados;
     }
@@ -67,6 +67,48 @@ public class Refugio{
 
            
         }
+
+
+        
+        public float calcularCosteDiarioTotal() {
+            float total = 0.0f;
+            for (int i = 0; i < this.animales_registrados; i++) {
+                total += this.animales[i].calcularCosteDiario(this.precio_alimentoKg);
+            }
+            return total;
+        }
+
+
+        public float calcularPesoMedio() {
+            if (this.animales_registrados == 0) {
+                return 0.0f;
+            }
+            float sumaPesos = 0.0f;
+            for (int i = 0; i < this.animales_registrados; i++) {
+                sumaPesos += this.animales[i].getpeso();
+            }
+            return sumaPesos / this.animales_registrados;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
