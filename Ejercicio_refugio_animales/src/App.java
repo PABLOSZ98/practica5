@@ -139,6 +139,7 @@ public class App {
                     break;
 
                 case 5:
+                    refugio = null;
                     System.out.println("Saliendo...");
                     break;
                 default:
