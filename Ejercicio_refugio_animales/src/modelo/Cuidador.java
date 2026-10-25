@@ -26,7 +26,7 @@ public class Cuidador{
             }
 
             public String getapellido(){
-
+ 
                 return apellidos;
             }
 
